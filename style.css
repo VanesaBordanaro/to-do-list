@@ -26,7 +26,7 @@ h1 {
 
 #special-text {
     border: 4px solid #000;
-    background-color: #aa6cf9;
+    background-color: #faa302;
     box-shadow: 5px 5px 2px rgba(0, 0, 0, 1);
     display: inline-flex;
     justify-content: center;
@@ -37,7 +37,7 @@ h1 {
     transform: rotate(-35deg);
 }
 
-button {
+.button-container {
     height: 55px;
     width: 155px;
     border: 4px solid;
@@ -83,12 +83,11 @@ ul {
     padding: 0;
     list-style: none;
     display: flex;
-    flex-direction: column;
     flex-direction: column-reverse;
 }
 
 ul li {
-    background-color: #ff4911;
+    background-color: #ca8dc5;
     width: 330px;
     height: 55px;
     color: #000;
@@ -99,8 +98,25 @@ ul li {
     border-radius: 6px;
     margin-top: 15px;
     box-shadow: 5px 5px 2px rgba(0, 0, 0, 1);
-    padding-top: 10px;
     padding-left: 5px;
     list-style: none;
 }
 
+li {
+    display: flex;
+    align-items: center;
+    justify-content:space-between; 
+    padding: 10px;
+  }
+   
+li button {
+    background: #ffffff86;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+  
+  
+
+  
