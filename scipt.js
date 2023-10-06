@@ -1,40 +1,3 @@
-// let myTasks = []
-
-// const inputTask = document.getElementById("add-task")
-// const inputBtn = document.getElementById("task-btn")
-// const refreshBtn = document.getElementById("refresh-btn")
-// const ulEl = document.getElementById("ul-el")
-// const taskFromLocalStorage = JSON.parse(localStorage.getItem("myTasks"))
-
-// if(taskFromLocalStorage) {
-//     myTasks = taskFromLocalStorage
-//     render(myTasks)
-// }
-
-// function render(task) {
-//     let listItems = ""
-//     for(let i = 0; i < task.length; i++) {
-//         listItems += `
-//             <li>
-//                 ${task[i]}
-//             </li>`
-//     }
-//     ulEl.innerHTML = listItems
-// }
-
-// inputBtn.addEventListener('click', function() {
-//     myTasks.push(inputTask.value)
-//     inputTask.value = ""
-//     localStorage.setItem("tasks", JSON.stringify(myTasks))
-//     render(myTasks)
-// })
-
-// refreshBtn.addEventListener('click', function() {
-//     localStorage.clear()
-//     myTasks = []
-//     render(myTasks)
-// })
-
 let tasks = [];
 
 const inputTask = document.getElementById("add-task");
@@ -54,12 +17,14 @@ function render(taskList) {
     const li = document.createElement("li");
     li.innerHTML = `
       ${task}
+      <div id="tasks-bnts"
       <button class="delete-btn" onclick="deleteTask(${index})">
         <img src="trash1.png" alt="Delete">
       </button>
       <button class="complete-btn" onclick="completeTask(${index})">
         <img src="check.png" alt="Complete">
       </button>
+      </div>
     `;
     ulEl.appendChild(li);
   });
@@ -74,7 +39,6 @@ function deleteTask(index) {
 function completeTask(index) {
   const li = ulEl.children[index];
   li.style.textDecoration = "line-through";
-  render(tasks);
 }
 
 function updateLocalStorage() {
