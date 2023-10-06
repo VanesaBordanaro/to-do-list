@@ -17,14 +17,9 @@ function render(taskList) {
     const li = document.createElement("li")
     li.innerHTML = `
       ${task}
-      <span id="tasks-btns">
       <button class="delete-btn" onclick="deleteTask(${index})">
         <img src="trash1.png" alt="Delete">
       </button>
-      <button class="complete-btn" onclick="completeTask(${index})">
-        <img src="check.png" alt="Complete">
-      </button>
-      </span>
     `;
     ulEl.appendChild(li)
   });
@@ -34,11 +29,6 @@ function render(taskList) {
 function deleteTask(index) {
   tasks.splice(index, 1)
   render(tasks)
-}
-
-function completeTask(index) {
-  const li = ulEl.children[index]
-  li.style.textDecoration = "line-through"
 }
 
 function updateLocalStorage() {

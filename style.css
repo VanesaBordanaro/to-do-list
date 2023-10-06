@@ -105,20 +105,12 @@ ul li {
   
 }
 
-.delete-btn, .complete-btn {
+.delete-btn {
     background-color: transparent;
     border: none;
     cursor: pointer;
     border-radius: 3px;
 }
-
-
-ul li span#tasks-btns {
-    display: flex;
-    gap: 10px; 
-    align-items: center; 
-  }
-
   
   
 
